@@ -1,0 +1,35 @@
+@import 'styles.sass'
+
+[data-sscope="dashadd"]
+  height: 40%
+  // border: 1px red solid
+  display: flex
+  align-items: center
+  justify-content: center
+
+  .search-container
+    width: 50%
+    position: relative
+
+    .address-input
+      border: none
+      outline: none
+      font-size: 30px
+      font-family: 'Raleway', sans-serif
+      width: 100%
+      border-bottom: 1px solid $light-gray-1
+      box-shadow: none
+    .suggestions-dropdown
+      position: absolute
+      top: 40px
+      left: 0
+      right: 0
+      // border: 1px blue solid
+      .suggestion-item
+        height: 40px
+        display: flex
+        align-items: center
+        border-bottom: 1px solid $light-gray-2
+        &.active
+          border-bottom: 1px solid $light-gray-2
+          height: 40px

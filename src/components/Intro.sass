@@ -1,2 +1,55 @@
+@import 'styles.sass'
+    
+// As explained in `Intro.js`, I'm using a `data-` attribute to "scope" these styles to elements in that component only.
 [data-sscope='intro']
-    color: blue
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    // border: 1px red solid
+    top: 50%
+
+    .panel-wrapper
+        padding: 30px
+        border-radius: 10px
+        display: flex
+        flex-flow: row nowrap
+        width: 100%
+    
+        .main-panel
+            // border: 1px red solid
+            display: flex
+            flex-flow: column nowrap
+            align-items: center
+            justify-content: center
+            flex: 1
+            .logo
+                margin-bottom: 120px
+                transition: margin-bottom 140ms linear
+            &.intro
+                width: 50%
+                .logo
+                    margin-bottom: 20px
+            .main-title
+                font-family: 'Raleway', sans-serif
+                font-size: 20px
+                font-weight: 600
+            .action-button
+                margin-top: 20px
+                font-size: 16px
+            
+        .tutorial-panel
+            width: 50%
+            opacity: 1
+            transition: all 500ms linear
+            flex: 1
+            display: flex
+            flex-flow: column nowrap
+            justify-content: center
+            &.hidden
+                transition: all 500ms linear
+                flex: 0
+                visibility: hidden
+                
+        
+    

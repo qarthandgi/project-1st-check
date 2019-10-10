@@ -1,0 +1,34 @@
+@import 'styles.sass'
+    
+[data-sscope="inst"]
+    // border: 1px red solid
+    width: 70%
+    float: center
+    margin: 20px auto
+    transition: all 300ms linear
+    max-height: 0
+    padding: 10px
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    box-shadow: 1px 1px 7px 1px $light-gray-1
+    border-radius: 6px
+    opacity: 0
+    &.available
+        max-height: 80px
+        overflow: hidden
+        opacity: 1
+    img
+        max-width: 30px
+        max-height: 30px
+        margin-left: 10px
+        margin-right: 20px
+        // border: 1px green solid
+    .content-wrap
+        font-family: 'Raleway', sans-serif
+        .title
+            font-size: 15px
+            font-weight: 600
+            margin-bottom: 3px
+        .description
+            font-size: 13px

@@ -1,0 +1,104 @@
+@import 'styles.sass'
+
+// I want to use grid for this content section to make it easier to rearrange in the future.
+// Using grid also aids in making that right-most content area span 2 rows
+[data-sscope="dashcon"]
+  background-color: $light-gray-2
+  flex: 1
+  display: grid
+  grid-template-rows: 1fr 1fr
+  grid-template-columns: 1fr 1fr 1fr
+
+  .grid-item
+    position: relative
+    margin: 4px
+    background-color: rgba(252, 252, 252, 1)
+    display: flex
+    flex-flow: column nowrap
+    & > div
+      flex-grow: 1
+    &.spanning
+      grid-row-start: span 2
+
+    .content-overlay
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      display: flex
+      flex-flow: column nowrap
+      justify-content: center
+      align-items: center
+      background-color: rgba(252, 252, 252, 1)
+      .logo
+        width: 30px
+        margin-bottom: 20px
+      .loading
+        width: 60px
+        display: none
+      &.is-processing
+        .loading
+          display: block
+
+    .item-header
+      height: 60px
+      width: 70%
+      margin: 0 auto
+      display: flex
+      flex-flow: row nowrap
+      align-items: center
+      border-bottom: 1px solid $light-gray-1
+      .logo
+        width: 38px
+        margin: 8px
+        img
+          width: 100%
+      .content
+        display: flex
+        flex-flow: column nowrap
+        font-family: 'Raleway', sans-serif
+        .title
+          font-size: 14px
+          font-weight: 600
+        .description
+          font-size: 11px
+
+
+[data-sscope="dchistoric"]
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 40px
+  font-family: 'Raleway'
+  font-weight: 600
+  font-size: 12px
+  text-align: center
+
+[data-sscope="dcairq"]
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  align-items: center
+  padding: 40px
+  font-family: 'Raleway'
+  .title
+    font-size: 13px
+    font-weight: 600
+  .value
+    font-size: 24px
+    font-weight: 500
+
+[data-sscope="dcsunsun"]
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  align-items: center
+  padding: 40px
+  font-family: 'Raleway'
+  .title
+    font-size: 13px
+    font-weight: 600
+  .value
+    font-size: 24px
+    font-weight: 500
