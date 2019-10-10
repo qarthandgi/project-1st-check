@@ -8,6 +8,7 @@
   display: grid
   grid-template-rows: 1fr 1fr
   grid-template-columns: 1fr 1fr 1fr
+  z-index: 2
 
   .grid-item
     position: relative
@@ -102,3 +103,12 @@
   .value
     font-size: 24px
     font-weight: 500
+
+[data-sscope="dcstv"]
+  display: flex
+  flex-flow: row nowrap
+  justify-content: center
+  align-items: center
+  position: relative
+  img
+    width: 90%

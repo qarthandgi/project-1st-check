@@ -10,6 +10,7 @@ function DashboardAddress({ dispatch }) {
   const [addressInput, setAddressInput] = useState('')
 
   const handleSelect = async (selected) => {
+    setAddressInput(selected)
     dispatch(processAddress(selected))
   }
 
